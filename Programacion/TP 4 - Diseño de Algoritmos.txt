@@ -1,0 +1,106 @@
+﻿Programación I
+Trabajo Práctico Nº 4
+________________
+
+
+Diseño de Algoritmos
+Temas Principales
+* Divide y Vencerás
+* Programación Dinámica
+Formato de Entrega
+                Se deberá completar la actividad en el Aula Virtual, agregando una carpeta compartida con todos los archivos fuente correspondiente por ejercicio.
+                La carpeta deberá llamarse Apellido_Nombre_TPN_4.
+
+
+Ejercicios Obligatorios a Entregar        2
+1. Búsqueda Ternaria        2
+2. Encontrar el Máximo Subarray        2
+3. Problema de la Mochila Discreto        2
+4. Instituto Con Pocas Contraseñas        2
+5. Optimizando Examen        3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  Ejercicios Obligatorios a Entregar
+1. Búsqueda Ternaria
+En ciencias de la computación y matemáticas, la búsqueda binaria, también conocida como búsqueda dicotómica, es un algoritmo de búsqueda que encuentra la posición de un valor en un arreglo ordenado, el mismo consiste en comparar el valor con el elemento en el medio del arreglo, si no son iguales, la mitad en la cual el valor no puede estar es eliminada y la búsqueda continua en la mitad restante hasta que el valor se encuentre, o no.
+Podemos plantearnos también diseñar un algoritmo de búsqueda “ternaria”, que primero compara con el elemento en posición n/3  del vector, si éste es menor que el elemento x a buscar entonces compara con el elemento en posición 2n/3, y si no coincide con x busca recursivamente en el correspondiente subarreglo de tamaño 1/3 del original.
+Diseñar un algoritmo que permita implementar la técnica de Divide y Vencerás para resolver el problema de la búsqueda ternaria.
+2. Encontrar el Máximo Subarray
+Dado un array de enteros que incluye tanto números positivos como negativos, se requiere encontrar el subarray contiguo que tiene la suma máxima y retornar esa suma. Un subarray es cualquier secuencia contigua de elementos dentro del array. Por ejemplo, dado el array [-2, 1, -3, 4, -1, 2, 1, -5, 4], el subarray contiguo con la suma máxima es [4, -1, 2, 1], con una suma total de 6.
+3. Problema de la Mochila Discreto
+Realizar el problema de la mochila, considerando que los objetos se toman completo, o no se toman, este problema se lo conoce como Mochila 0/1, dónde el 0 indica que el objeto no se ha tomado, y 1 que si se tomó.
+Utilizar la técnica de Programación Dinámica para resolverlo, puede utilizar el esquema propuesto en el libro de la asignatura para su resolución.
+4.  Instituto Con Pocas Contraseñas
+El presidente del Instituto Con Pocas Contraseñas (ICPC) ha decidido realizar algunas modificaciones en el sistema que utilizan sus usuarios, con el  fin de aumentar la seguridad del mismo. Si bien quiere que las contraseñas sigan siendo exclusivamente numéricas, va a exigir que la longitud de las mismas sea 2x10^9. Sin embargo, es poco práctico pedirle a los usuarios que ingresen contraseñas tan largas. Por esto los integrantes del ICPC deben ingresar su nombre de usuario y luego, se les va a solicitar que indiquen los dígitos de 4 posiciones de su contraseña elegidos de manera aleatoria (las posiciones en la contraseña se numeran del 1 al 2x10^9 de izquierda a derecha). Por ejemplo: si la contraseña empieza con 789123, el programa podría solicitar ingresar los dígitos de las posiciones 2, 3, 1 y 6, en ese orden. Eso quiere decir que para confirmar la contraseña y poder ingresar al sitio el usuario debe responder los dígitos que en su contraseña se ubican en esas posiciones (y en ese orden). En el ejemplo: 8973.
+El abuelo Laino, miembro histórico del ICPC, decidió generar su contraseña de la siguiente forma: como nació en el 46, su contraseña comienza con 46 y los siguientes dígitos se obtienen como el resultado de multiplicar los últimos dos dígitos. Su contraseña, por lo tanto, comienza con 4624832 pues: 4 x 6 = 24, 2 x 4 = 8 y 4 x 8 = 32.
+Si bien el abuelo Laino tuvo una excelente idea para generar su contraseña, le es bastante complicado indicar los dígitos que ocupan las posiciones solicitadas. ¿Pueden ayudar al abuelo Laino con esta tediosa tarea?
+ Entrada
+La entrada consiste en una sola línea que contiene cuatro enteros positivos X; Y;Z;W (1 <= X; Y;Z;W <= ) que representan las posiciones de los dígitos solicitados por el sistema.
+Salida
+Imprimir en la salida una línea conteniendo un número entero positivo que representa los cuatro dígitos que debe ingresar el abuelo Laino.
+  
+ 
+
+
+5. Optimizando Examen
+Eres un estudiante con un número fijo de días para prepararte para los exámenes finales de varias asignaturas. Cada asignatura tiene un valor de importancia asociado (por ejemplo, créditos que otorga) y requiere un número mínimo de días de estudio para estar adecuadamente preparado. Estudiar más de este mínimo mejorará tu comprensión, pero con rendimientos decrecientes, y hay un máximo efectivo de días de estudio por asignatura después del cual no obtendrás beneficios adicionales.
+
+
+Necesitas planificar tu calendario de estudio de manera que maximices el total de importancia de las asignaturas para las que estás adecuadamente preparado, sujeto a la restricción de tiempo total disponible. Si no alcanzas el mínimo de días requerido para una asignatura, no obtendrás ningún crédito por ella, independientemente de los días que le dediques.
+
+
+Entradas
+
+
+Número total de asignaturas (N)
+Número total de días disponibles para estudiar (D)
+Para cada asignatura (i):
+
+
+* Importancia de la asignatura L_i
+* Mínimo de días de estudio requerido para aprobar min_i
+* Máximo de días de estudio donde se sigue beneficiando max_i
+
+
+Salida
+
+
+La máxima importancia total que puedes obtener en tus exámenes con la asignación óptima de tu tiempo de estudio.
+
+
+Para simplificar el enunciado y hacerlo más manejable para una solución utilizando programación dinámica, podemos hacer las siguientes asunciones:
+
+
+* La importancia acumulada por estudiar una asignatura entre el mínimo y el máximo es lineal.
+* No es necesario asignar todos los días disponibles, es decir, puede ser que algunos días no se asigne estudio si esto no aporta beneficio.
+* Los días de estudio se pueden fraccionar en días parciales para una asignatura si es necesario.
+
+
+
+
+
+
+
+
+________________
+
+
+Escuela de Ingeniería                         Página  de
